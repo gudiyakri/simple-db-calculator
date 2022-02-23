@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="viewport" content="width=device-width, intial-scale=1">
+    <title>Calculator</title>
+    <style>
+ *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.container {
+  width: 340px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left:450px;
+  margin-top:50px;
+  background-color: #485461;
+  text-align:center;
+}
+.result {
+  margin-top: -230px;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size:large;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.input1{
+    position:absolute;
+background:white;
+margin-top:-30px;
+margin-left:-157px;
+height:40px;
+border-radius:1px solid white;
+width:150px;
+}
+.input2
+{
+    position:absolute;
+background:white;
+margin-top:-30px;
+margin-left:px;
+width:150px;
+height:40px;
+border-radius:1px solid white;
+}
+.btn
+{
+    position:absolte;
+background:#7FFFD4	;
+height:100px;
+margin-top:-10px;
+}
+.button{
+    border: none;
+    outline: none;
+    background:#7FFFD4	;
+    color:black	;
+    margin-top:30px;
+    padding:10px;
+    font-size:25px;
+}
+a{
+    text-decoration:none;
+    color:red;
+    font-size:20px;
+}
+/*.equal-button {
+    width:30px;
+  background-color: rgb(243, 61, 29);
+}
+
+.equal-button:hover {
+  background-color: rgb(228, 39, 15);
+}
+.clear-button {
+    width:30px;
+  background-color: rgb(182, 29, 243);
+}
+
+.clear-button:hover {
+  background-color: rgb(90, 15, 228);
+}
+*/
+@media(max-width: 576px) {
+  .container {
+      position:absolute;
+  border-radius: 10px;
+  /*margin-left:450px;*/
+ margin-top:50px;
+  background-color: #485461;
+  text-align:center;
+  }
+}
+        </style>
+  </head>
+  <body>
+<div class="container">
+    <h1>Calculator</h1>
+    <form action="/" method="post" target="result"><br><br><br><br><br><br>
+      <input type="number" name="num1" placeholder="First Number" required class="input1">
+      <input type="number" name="num2" placeholder="Second Number" required class="input2"><br><br>
+      <div class="btn">
+      <input type="button" value="+" name="button" class="button" onclick="cal(this.value)">
+      <input type="button" value="-" name="button" class="button" onclick="cal(this.value)">
+      <input type="button" value="*" name="button" class="button" onclick="cal(this.value)">
+      <input type="button" value="/" name="button"  class="button" onclick="cal(this.value)">
+      <input type="button" value="%" name="button" class="button"  onclick="cal(this.value)">
+      <button type="submit" name="submit" id="equalbtn" class="button">=</button>
+      <input type="reset" value="AC" class="button">
+      </div>
+      <iframe name="result" src="" width="313" class="result" height="50">
+          </iframe><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <a href="/users/fetch">History</a></button>
+    </form>
+    </div>
+    <script>
+    function cal(val) {
+      document.getElementById("equalbtn").value = val;
+  }
+  </script>
+  </body>
+</html>

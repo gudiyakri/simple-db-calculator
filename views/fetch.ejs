@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using Postgresql and Node.js</title>
+</head>
+<body>
+    <div style="overflow-y:auto;">
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Num1</th>
+            <th>Num2</th>
+            <th>Operator</th>
+            <th>Result</th>
+            <th>Time</th>
+        </tr>
+        
+        <%
+        if(item.length!=0){
+        var i=1;
+        item.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.num1 %></td>
+            <td><%=data.num2 %></td>
+            <td><%=data.operator %></td>
+            <td><%=data.result %></td>
+            <td><%=data.time %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
